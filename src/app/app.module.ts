@@ -21,7 +21,7 @@ import { InMemoryDataService } from './in-memory-data.service';
     DashboardComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
