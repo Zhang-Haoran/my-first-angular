@@ -1,22 +1,22 @@
-<h1>{{title}}</h1>
+<h1>{{ title }}</h1>
 <nav>
-    <a routerLink="/heroes">Heroes</a>
-    <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+  <a routerLink="/dashboard">Dashboard</a>
 </nav>
 <router-outlet></router-outlet>
 <app-messages></app-messages>
 <div>
-    <input type="radio" name="colors" (click)="color='lightgreen'">Green
-    <input type="radio" name="colors" (click)="color='yellow'">Yellow
-    <input type="radio" name="colors" (click)="color='cyan'">Cyan
- 
+  <input type="radio" name="colors" (click)="color = 'lightgreen'" />Green
+  <input type="radio" name="colors" (click)="color = 'yellow'" />Yellow
+  <input type="radio" name="colors" (click)="color = 'cyan'" />Cyan
 </div>
-<p [appHighlight] = "color">Highlight me!</p>
+<p [appHighlight]="color">Highlight me!</p>
 
 <p *appUnless="condition" class="unless a">
-    (A) This paragraph is displayed because the condition is false.
+  (A) This paragraph is displayed because the condition is false.
 </p>
 <p *appUnless="!condition" class="unless b">
-    (B) Although the condition is true,
-    this paragraph is displayed because appUnless is set to false.
-  </p>
+  (B) Although the condition is true, this paragraph is displayed because
+  appUnless is set to false.
+</p>
+<p>{{2 | expontialStrength:10 }}</p>

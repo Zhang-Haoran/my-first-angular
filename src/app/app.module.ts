@@ -13,6 +13,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data/in-memory-data.service';
 import { HighlightDirective } from './directive/highlight.directive';
 import { UnlessDirective } from './directive/unless.directive';
+import { ExpontialStrengthPipe } from './pipe/expontial-strength.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UnlessDirective } from './directive/unless.directive';
     MessagesComponent,
     DashboardComponent,
     HighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    ExpontialStrengthPipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
